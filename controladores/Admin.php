@@ -13,6 +13,13 @@ class Admin extends App
     }
 
     /* Vista */
+    public function login()
+    { 
+        $template["contenido"]  = "admin/inicio_sesion";
+        $template["nombre_pagina"] ="login";
+        /* Mostrar la plantilla dibde se mostrara la el contenido */
+        $this->vista("admin/layout_Admin", $template);
+    }
 
     public function inicio()
     {
@@ -29,6 +36,6 @@ class Admin extends App
 
         $template["contenido"]  = $this->vista("Admin/usuarios_admin", $datos , true);
         /* Mostrar la plantilla dibde se mostrara la el contenido */
-        $this->vista("Admin/template_Admin", $template);
+        $this->vista("Admin/layout_Admin", $template);
     }
 }

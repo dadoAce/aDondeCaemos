@@ -68,4 +68,21 @@ html,body{
 .bg-8{
     background: var(--accion3);
 }
+
+.bg-light-opacity{
+    background-color: #ffffffd1;
+}
 /*Colores*/
+
+.page-login{
+    background-image: url("/assets/imgs/sistema/w-d-login.jpg");
+    background-size: cover;
+}
+@media(max-width: 520px){
+    
+    .page-login{
+        background-image: url("/assets/imgs/sistema/w-m-login.jpg");
+        background-size: cover;
+    }
+    
+}

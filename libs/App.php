@@ -13,7 +13,7 @@ class App
             OPCIONAL:       LLENAR SI QUIERES ESPECIFICAR OTRA DIRECCIÓN
       
       */
-    public $_localhost = "/DadoRoom";
+    public $_localhost = "http://www.adondecaemos.dado/";
 
     public $_base_url = "";
 
@@ -167,7 +167,7 @@ class App
                 }
                 //MOSTRAR LA RUTA
                 include_once $this->locacion_vistas . "/" . $vista . ".php";
-            } else {
+            } else { 
                 //EN CASO DE QUE NO SE ENCUENTRE LA RUTA
                 echo "VISTA NO ENCONTRADA";
                 echo "<br>";

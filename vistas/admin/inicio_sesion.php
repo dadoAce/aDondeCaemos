@@ -1,16 +1,15 @@
+
+
 <div class="container h-100  d-flex flex-column justify-content-center align-items-center">
-    <div class="   d-flex flex-column justify-content-center align-items-center bg-light border pl-5 pr-5 shadow rounded">
+    <div class="   d-flex flex-column justify-content-center align-items-center bg-light-opacity border py-5 px-5 shadow rounded opacity-75">
         <img width="100" src="<?php echo $this->base_url("/assets/imgs/sistema/LogoDado200p.png") ?>">
-        <h1>DADOROOM v.1.2</h1>
-        <h4> <a target="_blank" href="https://dadoace.github.io/DadoRoom/"><i class="bi bi-book pr-2"></i>Documentación</a> </h4>
+        <h1>A DONDE CAEMOS</h1>
+        <h6> by DADOROOM</h6> 
     </div>
 
-    <form class="text-center    d-flex flex-column justify-content-center align-items-center bg-white border pl-5 pr-5 pb-3 mt-3 shadow rounded" action="Usuario/iniciarSesion" method="post">
-        <div>
-            <label>Usar el Script de ejemplo 'BD_DadoRoom.sql' para poder ejecutar el sistema de muestra</label>
- 
-        </div>
-
+    <form class="text-center    d-flex flex-column justify-content-center align-items-center bg-light-opacity border px-5 py-3 mt-3 shadow rounded" 
+    action="Usuario/iniciarSesion" method="post">
+      
         <h3>Inicia Sesion</h3>
         <div class="input-group mb-3 text-center d-flex flex-row justify-content-center  ">
             <div class="input-group-prepend">

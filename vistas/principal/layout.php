@@ -7,11 +7,11 @@
     <?= $this->vista("_complementos/referencias/referencias"); ?>
 </head>
 
-<?php $this->vista("_complementos/menus/navbar"); ?>
 <body class="bg-g-1">
     <main class="main-principal h-100">
 
         <!--MENU LATERAL-->
+        <?php $this->vista("_complementos/menus/navbar"); ?>
         <!--CONTENIDO-->
         <section id="contenido" class=" h-100 d-flex justify-content-center ">
             <!-- <?php $this->vista("principal/secciones/inicioSesion"); ?> -->
