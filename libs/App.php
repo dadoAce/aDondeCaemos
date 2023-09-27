@@ -13,7 +13,7 @@ class App
             OPCIONAL:       LLENAR SI QUIERES ESPECIFICAR OTRA DIRECCIÓN
       
       */
-    public $_localhost = "http://www.adondecaemos.dado/";
+    public $_localhost = "http://www.adondecaemos.dado";
 
     public $_base_url = "";
 

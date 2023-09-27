@@ -22,24 +22,29 @@ class Usuario extends App
         $usuarioModel = $this->modelo("UsuarioModel");
 
         /* Obtener los datos del formulario de inicio de sesion; Guardarlos en un arreglo */
-        $datos["usuario"] = $_POST["usuario"];
+        $datos["correo"] = $_POST["correo"];
         $datos["password"] = $_POST["password"];
         /* Mander el arreglo y buscar en la base de datos */
         $result = $usuarioModel->iniciarSesion($datos);
+        //echo var_dump($result);
 
         if ($result != null) {
             /* Guardar valores en una sesion */
             $_sesionLIB->setUsuarioSesion($result);
 
-            if ($result["rol_usuario"]) {
+            if ($result["rol"] == "usuario") {
                 /* Si es Cliente */
-                $this->header("/Home/Usuario");
-            } else {/* si es admin */
-                $this->header("/Admin");
+                $this->vista("principal/inicio");
+            } else if ($result["rol"] == "admin") {
+                /* Si es admin */
+                $this->vista("admin/layout_admin");
+            } else {/* si es otra cosa */
+                
             }
         } else {
             /* Si no se encontro el usuario  en la base de datos */
-            $this->header("/Home/calendario");
+            //$this->header("/Home/calendario");
+            echo "no se encontro tu usuario :(";
         }
     }
 

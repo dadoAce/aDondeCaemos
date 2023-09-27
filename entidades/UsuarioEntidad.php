@@ -18,10 +18,10 @@ class UsuarioEntidad {
             foreach ($datos as $key => $value) {
                 switch ($value["rol"]) {
                     case 0:
-                        $datos[$key]["rol"] = "Admin";
+                        $datos[$key]["rol"] = "admin";
                         break;
                     case 1:
-                        $datos[$key]["rol"] = "Usuario";
+                        $datos[$key]["rol"] = "usuario";
 
                         break;
 
