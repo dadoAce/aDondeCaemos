@@ -10,6 +10,8 @@
                  <input type="button" class="btn  bg-8 text-white float-right" value="Editar" id="btn-editar">
 
      </div>
+
+     <?= var_dump($usuario);?>
      <div class="bg-light  row rounded border p-2 pb-3 w-100">
          <div class=" col-12 ">
              <h4>Datos de usuario</h4>

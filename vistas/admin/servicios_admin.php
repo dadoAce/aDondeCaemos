@@ -16,27 +16,20 @@
 
                 <h5>Usuarios Activos</h5>
                 <table class="table table-light w-100 ">
-                    <thead>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Estatus</th>
+                    <thead> 
+                        <th>Nombre</th>  
                         <th>Creación</th>
                         <th> </th>
                     </thead>
                     <tbody>
                         <?php 
-                        if (isset($usuarios) && $usuarios != null) {
+                        if (isset($ubicaciones) && $ubicaciones != null) {
                         ?>
-                            <?php foreach ($usuarios as $value) { ?>
-                                <tr>
-                                    <td><?= $value["nombre_usuario"] ?></td>
-                                    <td><a href="<?= $this->base_url("Usuario/detallesUsuario/" . $value["id"]) ?>" class="text-dark"> 
-                                    <?= $value["correo"] ?></a></td>
-                                    <td><?= $value["rol"] ?></td>
-                                    <td><?= $value["fecha_creacion"] ?></td>
-                                    <td><a href="<?= $this->base_url("/Admin/eliminarLogica/" . $value["id"]) ?>" class="btn btn-danger">Eliminar</a>
-                                        <a href="<?= $this->base_url("/Admin/detallesUsuario/" . $value["id"]) ?>" class="btn btn-primary"> Detalles</a>
-                                    </td>
+                            <?php foreach ($ubicaciones as $value) { ?>
+                                <tr> 
+                                    <td><?= $value["nombre_servicio"] ?></td> 
+                                    <td><?= $value["estatus"] ?></td> 
+                                    <td><?= $value["fecha_creacion"] ?></td> 
                                 </tr>
                             <?php }
                             ?>
@@ -53,32 +46,28 @@
  
                 <div class="h-100 d-flex flex-column justify-content-center align-items-center w-100">
 
-                    <form class=" bg-light row border rounded p-1  " action="/Usuario/crearUsuario" method="post">
+                    <form class=" bg-light row border rounded p-1  " action="/Admin/crearServicio" method="post">
                         <div class="text-center w-100">
-                            <h5>Crear Nuevo Usuario</h5>
+                            <h5>Agregar servicio</h5>
                         </div>
                         <div class="input-group mb-3 text-center d-flex flex-row justify-content-center   pl-5 pr-5">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span>
                             </div>
-                            <input type="text" id="usuario" name="usuario" maxlength="100" required="" class="form-control">
-                        </div>
-                        <div class="input-group mb-3 text-center d-flex flex-row justify-content-center  pl-5 pr-5">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock-fill"></i></span>
-                            </div>
-                            <input type="text" id="password" name="password" maxlength="100" required="" class="form-control">
-                        </div>
+                            <input type="text" id="nombre" name="nombre" maxlength="100" required="" class="form-control">
+                        </div> 
+
                         <div class="input-group mb-3 text-center d-flex flex-row justify-content-center  pl-5 pr-5">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-app"></i></span>
                             </div>
-                            <select id="rol" name="rol" class="form-control">
-                                <option value="1">Usuario</option>
-                                <option value="0">Admin</option>
+                            <select id="estatus" name="estatus" class="form-control">
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
 
                             </select>
                         </div>
+
                         <div class=" col-12 pt-2 text-center">
                             <input type="submit" class="btn bg-2 text-white" value="Crear Usuario">
                         </div>

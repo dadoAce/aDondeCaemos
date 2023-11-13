@@ -36,8 +36,9 @@ class Usuario extends App
                 /* Si es Cliente */
                 $this->vista("principal/inicio");
             } else if ($result["rol"] == "admin") {
-                /* Si es admin */
-                $this->vista("admin/layout_admin");
+                /* Si es admin */ 
+                
+                $this->header("/Admin");
             } else {/* si es otra cosa */
                 
             }

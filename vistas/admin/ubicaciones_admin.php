@@ -17,25 +17,25 @@
                 <h5>Usuarios Activos</h5>
                 <table class="table table-light w-100 ">
                     <thead>
-                        <th>Nombre</th>
-                        <th>Correo</th>
+                        <th></th>
+                        <th>Nombre</th> 
                         <th>Estatus</th>
                         <th>Creación</th>
                         <th> </th>
                     </thead>
                     <tbody>
                         <?php 
-                        if (isset($usuarios) && $usuarios != null) {
+                        if (isset($ubicaciones) && $ubicaciones != null) {
                         ?>
-                            <?php foreach ($usuarios as $value) { ?>
+                            <?php foreach ($ubicaciones as $value) { ?>
                                 <tr>
-                                    <td><?= $value["nombre_usuario"] ?></td>
                                     <td><a href="<?= $this->base_url("Usuario/detallesUsuario/" . $value["id"]) ?>" class="text-dark"> 
-                                    <?= $value["correo"] ?></a></td>
-                                    <td><?= $value["rol"] ?></td>
+                                    <?= $value["img_principal"] ?></a></td>
+                                    <td><?= $value["nombre"] ?></td>
+                                    <td><?= $value["estatus"] ?></td>
                                     <td><?= $value["fecha_creacion"] ?></td>
-                                    <td><a href="<?= $this->base_url("/Admin/eliminarLogica/" . $value["id"]) ?>" class="btn btn-danger">Eliminar</a>
-                                        <a href="<?= $this->base_url("/Admin/detallesUsuario/" . $value["id"]) ?>" class="btn btn-primary"> Detalles</a>
+                                    <td> 
+                                        <a href="<?= $this->base_url("/Admin/ubicaciones_detalles/" . $value["id"]) ?>" class="btn btn-outline-primary"> Detalles</a>
                                     </td>
                                 </tr>
                             <?php }
@@ -55,7 +55,7 @@
 
                     <form class=" bg-light row border rounded p-1  " action="/Usuario/crearUsuario" method="post">
                         <div class="text-center w-100">
-                            <h5>Crear Nuevo Usuario</h5>
+                            <h5>Agregar lugar</h5>
                         </div>
                         <div class="input-group mb-3 text-center d-flex flex-row justify-content-center   pl-5 pr-5">
                             <div class="input-group-prepend">

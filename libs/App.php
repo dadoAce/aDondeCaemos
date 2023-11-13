@@ -175,6 +175,7 @@ class App
             }
         }
     }
+     
 
     //LLAMAR A UN MODELO
     public function modelo($modelo)
